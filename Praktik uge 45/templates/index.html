@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TableView - Startup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<script> document.body.style.background = "black" </script>
+
+<div class="container">
+  <h2 class="text-center" style="color: whitesmoke"><u>Router Data</u></h2><br>
+  <table class="table table-dark table-striped" style="border-radius: 17px; border-top: none;">
+    <thead>
+      <tr>
+        <th>IP</th>
+        <th>Continent</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Zipcode</th>
+        <th>Timezone</th>
+        <th>ISP</th>
+        <th>Organisation</th>
+        <th>Proxy</th>
+        <th>Hosting</th>
+        <th>Blocked</th>
+      </tr> 
+    </thead>
+    <tbody>
+      <!-- jinja2 Technique -->
+      {% if d %}
+          {% for country, ip_data in d.items() %}
+              {% for ip, details in ip_data.items() %}
+                  <tr> 
+                      <td>{{ ip }}</td>
+                      <td>{{ details.continent }}</td> 
+                      <td>{{ details.country }}</td> 
+                      <td>{{ details.city }}</td> 
+                      <td>{{ details.zipcode }}</td> 
+                      <td>{{ details.timezone }}</td> 
+                      <td>{{ details.isp }}</td> 
+                      <td>{{ details.organisation }}</td> 
+                      <td>{{ details.proxy }}</td> 
+                      <td>{{ details.hosting }}</td> 
+                      <td>{{ details.Blocked }}</td> 
+                  </tr> 
+              {% endfor %}
+          {% endfor %}
+      {% endif %}
+  </tbody>
+  </table> 
+</div> 
+  
+</body> 
+</html> 

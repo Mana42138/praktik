@@ -1,0 +1,16 @@
+{
+    "United States": {
+        "192.241.213.27": {
+            "continent": "North America",
+            "country": "United States",
+            "city": "San Francisco",
+            "zipcode": "94124",
+            "timezone": "America/Los_Angeles",
+            "isp": "DigitalOcean, LLC",
+            "organisation": "Digital Ocean",
+            "proxy": "True",
+            "hosting": "True",
+            "Blocked": false
+        }
+    }
+}
